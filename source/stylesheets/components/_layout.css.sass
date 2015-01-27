@@ -1,13 +1,12 @@
 section
-  +outer-container()
 
 aside
   &.sidebar-nav
-    +span-columns(3)
+    +span-columns(2, collapse)
     background: $dark-gray
     padding: 0 20px
     box-sizing: border-box
-    // height: 100vh
+    height: 100vh
     header
       text-transform: uppercase
       color: $gray
@@ -37,10 +36,13 @@ aside
 
 article
   &.main-content
-    // height: 100vh
-    +span-columns(9)
+    height: 100vh
+    +span-columns(10, collapse)
     background: $smoke
     box-sizing: border-box
+    padding: 20px
+    h1
+      margin-bottom: 20px
     figure
       ul
         margin: 0

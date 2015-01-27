@@ -11,9 +11,23 @@ $green: #2EB398
 $red: #CB5656
 $gray: #697579
 $dark-gray: #232B2D
+$smoke: #F6F6F6
+
+// Mixins
+@mixin ease-out
+  -webkit-transition: all 0.3s ease-out
+  -moz-transition: all 0.3s ease-out
+  -o-transition: all 0.3s ease-out
+  transition: all 0.3s ease-out
 
 // Typography
 body
   font:
     family: 'Muli', sans-serif
     weight: 400
+  color: $black
+
+h1
+  font:
+    weight: 300
+  margin: 0

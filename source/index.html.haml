@@ -20,4 +20,16 @@
           %span &nbsp; Users
 
   %article.main-content
-    %h2 Dashboard
+    %h1 Dashboard
+    %figure.list
+      %header
+        Companies
+      %ul
+        -10.times do
+          %li
+            %a{href: "#"}
+              Company Name
+      %a.button{href: "#"} Add Company
+    %figure.activity
+      %header
+        Recent Activity

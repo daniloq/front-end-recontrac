@@ -1,2 +1,38 @@
-section
- +column(12)
+aside
+  &.sidebar-nav
+    +column(3)
+    margin: 0
+    background: $dark-gray
+    padding: 0 20px
+    box-sizing: border-box
+    height: 100vh
+    header
+      text-transform: uppercase
+      color: $gray
+      margin: 30px 0 20px 0
+      font:
+        size: 12px
+        family: 'Montserrat', sans-serif
+        weight: 700
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      li
+        margin: 10px 0 0 0
+        a
+          color: $gray
+          text-decoration: none
+          span
+            font:
+              size: 16px
+          i
+            font:
+              size: 22px
+          &:hover
+            color: white
+
+article
+  &.main-content
+    +column(9)
+    background: white

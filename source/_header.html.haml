@@ -1,6 +1,7 @@
 %header.top-nav
-  %nav
+  %nav.container
     = image_tag "recontrac.png"
     %form.right
-      %label
-        %input{type: "text"}
+      %label.input-label
+        %input{type: "text", placeholder: "Search"}
+        %i.ion-android-search

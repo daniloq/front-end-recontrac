@@ -2,34 +2,36 @@
 
 %section.admin-dashboard
 
-  %aside.sidebar-nav
-    %header Main
-    %ul
-      %li
-        %a{href: "#"}
-          %i.ion-android-home
-          %span &nbsp; Dashboard
-    %ul
-      %li
-        %a{href: "#"}
-          %i.ion-android-car
-          %span &nbsp; Companies
-      %li
-        %a{href: "#"}
-          %i.ion-android-person
-          %span &nbsp; Users
+  = partial "sidebar_nav"
 
   %article.main-content
     %h1 Dashboard
     %figure.list
       %header
-        Companies
+        %dl.inline
+          %dt
+            Companies
+            .count
+              100
+          %dd
+            = link_to "#" do
+              Manage
       %ul
-        -10.times do
+        -100.times do
           %li
             %a{href: "#"}
               Company Name
-      %a.button{href: "#"} Add Company
+              %small Modified March 10, 2015
     %figure.activity
       %header
         Recent Activity
+      %ul
+        %li.active
+          %a{href: "#"}
+            Mike Davidson Ford
+            %small Last seen 5 minutes ago
+        -50.times do
+          %li
+            %a{href: "#"}
+              Autoline
+              %small Last seen 10 minutes ago

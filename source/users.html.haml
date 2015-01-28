@@ -13,13 +13,13 @@
         %li.active
           %dl.inline
             %dd
-              %a{href: "#"}
+              %a{rel: "leanModal", href: "#modal"}
                 Mike Davidson Ford
                 %small Modified 5 minutes ago
             %dd
               Acount Owner
             %dd
-              %a.button.primary{href: "#"} Edit
+              %a.button{href: "#"} Edit
               %a.close{href: "#"}
                 %i.ion-close
 
@@ -36,3 +36,15 @@
                 %a.button.primary{href: "#"} Edit
                 %a.close{href: "#"}
                   %i.ion-close
+
+#modal.modal-window{style: "display: none"}
+  .modal-inner
+    %label.modal-close{:for => "modal-1"}
+    %h1 Modal Title
+    %p.modal-intro Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.
+    %p.modal-content Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.
+
+:javascript
+  $(function() {
+    $('a[rel*=leanModal]').leanModal({ top : 200, closeButton: ".modal_close" });
+  });

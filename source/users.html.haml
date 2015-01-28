@@ -8,7 +8,13 @@
     %h1 Users
     %figure.manage-list
       %header
-        Manage Users
+        %dl.inline
+          %dt
+            Manage Users
+          %dd
+            %a{rel: "leanModal", href: "#modal"}
+              %i.ion-plus
+              New User
       %ul
         %li.active
           %dl.inline
@@ -19,7 +25,7 @@
             %dd
               Acount Owner
             %dd
-              %a.button{href: "#"} Edit
+              %a.button.primary{rel: "leanModal", href: "#modal"} Edit
               %a.close{href: "#"}
                 %i.ion-close
 
@@ -27,22 +33,39 @@
           %li
             %dl.inline
               %dd
-                %a{href: "#"}
+                %a{rel: "leanModal", href: "#modal"}
                   Autoline
                   %small Modified 10 minutes ago
               %dd
                 Acount Owner
               %dd
-                %a.button.primary{href: "#"} Edit
+                %a.button.primary{rel: "leanModal", href: "#modal"} Edit
                 %a.close{href: "#"}
                   %i.ion-close
 
-#modal.modal-window{style: "display: none"}
+#modal{style: "display: none"}
   .modal-inner
-    %label.modal-close{:for => "modal-1"}
-    %h1 Modal Title
-    %p.modal-intro Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.
-    %p.modal-content Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.
+    %h3 Edit User
+    %form
+      .control
+        %label Name
+        %input{type: "text"}
+      .control
+        %label Email
+        %input{type: "email"}
+      .control
+        %label Password
+        %input{type: "password"}
+      .control.radio
+        %input{:checked => "", :name => "alone", :type => "radio"}/
+        %label Account Manager
+      .control.radio
+        %input{:checked => "", :name => "alone", :type => "radio"}/
+        %label Account Manager
+      .control.radio
+        %input{:checked => "", :name => "alone", :type => "radio"}/
+        %label Account Manager
+      %input.button{type: "submit", value: "Save"}
 
 :javascript
   $(function() {

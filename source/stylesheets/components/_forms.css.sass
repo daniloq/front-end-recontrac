@@ -1,10 +1,18 @@
 input
   outline: none
-  border: none
+  border: 1px solid lighten($gray, 40%)
   border-radius: 4px
   height: 30px
   padding-left: 10px
   box-sizing: border-box
+  &[type="submit"]
+    background: $green
+    border: none
+    line-height: 0
+    +ease-out
+    &:hover
+      background: darken($green, 10%)
+
 
 label
   &.input-label
@@ -17,3 +25,30 @@ label
       color: $gray
       right: 15px
       top: 0
+
+form
+  .control
+    margin-bottom: 15px
+    label
+      display: block
+      color: $gray
+      font:
+        size: 12px
+        family: 'Montserrat', sans-serif
+        weight: 400
+      text-transform: uppercase
+      margin-bottom: 5px
+    &.radio
+      label
+        display: inline-block
+        font:
+          size: 12px
+          family: 'Muli', sans-serif
+          weight: 400
+        text-transform: none
+      input
+        width: auto
+        height: auto
+        margin-right: 5px
+    input
+      width: 100%

@@ -22,6 +22,9 @@ aside
         a
           color: $gray
           text-decoration: none
+          display: block
+          position: relative
+          width: 100%
           +ease-out
           span
             font:
@@ -35,6 +38,10 @@ aside
             color: white
             i
               color: $green
+          .label
+            right: 0
+            position: absolute
+            margin-top: 4px
 
 article
   &.main-content
@@ -75,30 +82,7 @@ article
             font:
               weight: 300
             text-transform: none
-      &.list, &.activity
-        ul
-          height: 72vh
-          overflow-y: scroll
-          li
-            &:hover
-              background: $smoke
-            a
-              color: $gray
-              padding: 10px 0
-              margin: 0 15px
-              display: block
-              box-sizing: border-box
-              border-bottom: 1px solid darken($smoke, 2%)
-              small
-                display: block
-            &.active
-              background: lighten($blue, 62%)
-              a, small
-                color: $blue
-      &.list
-        +span-columns(3)
-      &.activity
-        +span-columns(9)
+
 
 figure
   background: white

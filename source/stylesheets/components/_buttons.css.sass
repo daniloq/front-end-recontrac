@@ -3,11 +3,16 @@ a
   +ease-out
   &:hover
     color: darken($green, 10%)
+  &.close
+    color: $red
+    &:hover
+      color: darken($red, 20%)
 
 .button
   border-radius: 4px
   padding: 10px 20px
   background: $gray
+  min-width: 50px
   display: block
   text-decoration: none
   box-sizing: border-box
@@ -17,10 +22,11 @@ a
     size: 12px
     family: 'Montserrat', sans-serif
     weight: 400
+  +dropshadow
   &:hover
     color: white
     background: darken($gray, 10%)
   &.primary
-    background: $green
+    background: $blue
     &:hover
-      background: darken($green, 10%)
+      background: darken($blue, 10%)

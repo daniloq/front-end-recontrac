@@ -21,7 +21,7 @@
 #
 # A path which all have the same layout
 # with_layout :admin do
-#   page "/admin/*"
+page "/admin/*"
 # end
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)

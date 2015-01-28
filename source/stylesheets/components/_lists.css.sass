@@ -5,6 +5,7 @@ dl
     dt, dd
       margin: 0
       display: inline-block
+      vertical-align: middle
 
 ul
   &.inline
@@ -15,3 +16,51 @@ ul
       margin: 0
       padding: 0
       display: inline-block
+
+figure
+  &.list, &.activity, &.manage-list
+    ul
+      height: 72vh
+      overflow-y: scroll
+      li
+        border-bottom: 1px solid darken($smoke, 2%)
+        &:hover
+          background: $smoke
+        a
+          color: $gray
+          padding: 10px 0
+          margin: 0 15px
+          display: block
+          box-sizing: border-box
+          small
+            display: block
+        &.active
+          background: lighten($blue, 62%)
+          a, small
+            color: $blue
+          .button
+            color: white
+          dl
+            color: $blue
+  &.list
+    +span-columns(3)
+  &.activity
+    +span-columns(9)
+  &.manage-list
+    ul > li >
+      dl
+        display: table
+        width: 100%
+        color: $gray
+        dd
+          display: table-cell
+          width: 30%
+          font-size: 14px
+          a
+            text-decoration: none
+          &:nth-of-type(3)
+            a
+              display: inline-block
+              color: white
+              &.close
+                color: $red
